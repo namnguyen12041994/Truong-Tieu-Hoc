@@ -15,7 +15,8 @@
     <div class="row">
          <%--MainBody--%>   
             <div class="col-md-8">
-        	    <uc1:MainBody runat="server" ID="MainBody" />
+        	    <%--<uc1:MainBody runat="server" ID="MainBody" />--%>
+                <asp:PlaceHolder ID="MainBody" runat="server"></asp:PlaceHolder>
             </div>
         <%--///MainBody--%>
 

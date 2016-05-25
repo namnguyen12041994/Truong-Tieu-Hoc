@@ -11,7 +11,14 @@ namespace TruongTieuHoc.Display.Content
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.QueryString["page"] == "" || Request.QueryString["page"] == null)
+            {
+                MainBody.Controls.Add(LoadControl("MainBody.ascx"));
+            }
+            else
+            {
+                MainBody.Controls.Add(LoadControl("Detail.ascx"));
+            }
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TruongTieuHoc.Display.Content {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TruongTieuHoc.Display.Content.MainBody MainBody;
+        protected global::System.Web.UI.WebControls.PlaceHolder MainBody;
         
         /// <summary>
         /// RightArea control.

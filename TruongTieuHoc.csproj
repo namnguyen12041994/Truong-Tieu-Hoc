@@ -97,6 +97,7 @@
     <Content Include="DisplaySource\js\pscroller.js" />
     <Content Include="DisplaySource\js\respond.min.js" />
     <Content Include="Display\Body.ascx" />
+    <Content Include="Display\Content\Detail.ascx" />
     <Content Include="Display\Content\GioiThieu.ascx" />
     <Content Include="Display\Content\MainBody.ascx" />
     <Content Include="Display\Content\RightArea.ascx" />
@@ -132,6 +133,13 @@
     </Compile>
     <Compile Include="Display\Body.ascx.designer.cs">
       <DependentUpon>Body.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Display\Content\Detail.ascx.cs">
+      <DependentUpon>Detail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Display\Content\Detail.ascx.designer.cs">
+      <DependentUpon>Detail.ascx</DependentUpon>
     </Compile>
     <Compile Include="Display\Content\GioiThieu.ascx.cs">
       <DependentUpon>GioiThieu.ascx</DependentUpon>
