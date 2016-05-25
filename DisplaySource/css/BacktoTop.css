@@ -1,0 +1,23 @@
+﻿/*Back to top    .......*/
+.button_scroll2top{
+	display:none;
+	width:40px;
+	height:40px;
+	padding-left:33px;
+	position:fixed;
+	z-index:999;
+	right:0px;
+	top:82%;
+	cursor:pointer;
+	opacity:0.5;
+	background: url("../Images/arrow_hover1.png") top left repeat-x;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+}
+
+.button_scroll2top:hover{
+	background: url("../Images/arrow_hover.png") top left repeat-x;
+	opacity:1.0;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+}
