@@ -11,14 +11,23 @@ namespace TruongTieuHoc.Display.Content
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["page"] == "" || Request.QueryString["page"] == null)
-            {
+            if(Request.QueryString.AllKeys.Count() == 0)
                 MainBody.Controls.Add(LoadControl("MainBody.ascx"));
-            }
             else
             {
-                MainBody.Controls.Add(LoadControl("Detail.ascx"));
-            }
+                string n = Request.QueryString.GetKey(0);
+                switch (n)
+                {
+                    case "page":
+                        MainBody.Controls.Add(LoadControl("Detail.ascx"));
+                        break;
+                    case "cata":
+                        MainBody.Controls.Add(LoadControl("ViewCatalo.ascx"));
+                        break;
+                    default: MainBody.Controls.Add(LoadControl("MainBody.ascx"));
+                        break;
+                }
+            }            
         }
     }
 }

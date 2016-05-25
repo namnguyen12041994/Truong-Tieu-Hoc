@@ -3,7 +3,7 @@
 <div class="col-md-12 col-sm-12">
     <asp:Repeater ID="rptChiTiet" runat="server">
         <ItemTemplate>
-        <div class="glyphicon glyphicon-stats"></div>&nbsp;<%#: Eval("tennhom") %>
+        <div class="glyphicon glyphicon-stats"></div>&nbsp;»&nbsp;&nbsp;<%#: Eval("tennhom") %>
             <hr>
             <h3><%#: Eval("tieude") %></h3>
            <div class="noidungchinh">

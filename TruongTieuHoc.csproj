@@ -103,6 +103,7 @@
     <Content Include="Display\Content\RightArea.ascx" />
     <Content Include="Display\Content\SliderArea.ascx" />
     <Content Include="Display\Content\TrangChu.ascx" />
+    <Content Include="Display\Content\ViewCatalo.ascx" />
     <Content Include="Display\Footer.ascx" />
     <Content Include="Display\Header.ascx" />
     <Content Include="Web.config" />
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="Display\Content\TrangChu.ascx.designer.cs">
       <DependentUpon>TrangChu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Display\Content\ViewCatalo.ascx.cs">
+      <DependentUpon>ViewCatalo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Display\Content\ViewCatalo.ascx.designer.cs">
+      <DependentUpon>ViewCatalo.ascx</DependentUpon>
     </Compile>
     <Compile Include="Display\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
