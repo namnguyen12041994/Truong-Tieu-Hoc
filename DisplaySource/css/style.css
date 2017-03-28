@@ -1,5 +1,5 @@
 body {
-  background: url("../images/bg.jpg") repeat fixed center;
+  background: #121212 url(../images/dark_wood.png);
 }
 
 #header .navbar {
@@ -41,8 +41,18 @@ body {
 }
 
 #main .container {
-  background-color: #F6F3EF;
-  margin-top: 10px;
+    background-color: white;
+  margin-top: 0px;
+}
+
+#main .container {
+    background-color: white;
+  margin-top: 0px;
+}
+
+#main .footer {
+  background-color: white;
+  margin-top: 8px;
 }
 
 #main .container .panel-title {
@@ -72,10 +82,13 @@ body {
   min-height: 400px;
 }
 
-#main .content .row .col-md-8 {
-  /*padding-right: 0px;
-  padding-left: 0px;*/
-  padding: inherit;
+#main .content .row .col-md-8{
+  padding-right: 1px;
+    padding-left: 1px;
+}
+
+#main .content .row .col-md-4{
+  padding-left: 1px;
 }
 
 #main .content .col-xs-2 .panel .access, #main .content .col-sm-2 .panel .access, #main .content .col-md-2 .panel .access, #main .content .col-lg-2 .panel .access {

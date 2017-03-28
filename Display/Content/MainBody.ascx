@@ -13,16 +13,16 @@
                 <tbody>
                     <tr>
 			        <asp:Repeater ID="rptTinTucSuKien" runat="server">
-                        <ItemTemplate>
+                        <ItemTemplate>                            
                             <td valign="top" align="center" width="33%">
                                 <div class="img_news_h_1">
                                     <div align="center" class="img_news_h">
-                                        <a href="#"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
+                                        <a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
-                                <div class="news_t_h"><a href="#"><%#:Eval("tieude") %></a>
+                                <div class="news_t_h"><a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><%#:Eval("tieude") %></a>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="new_teaser_h"><%#:Eval("tomtat") %></div>
@@ -51,12 +51,12 @@
                             <td valign="top" align="center" width="33%">
                                 <div class="img_news_h_1">
                                     <div align="center" class="img_news_h">
-                                        <a href="#"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
+                                        <a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
-                                <div class="news_t_h"><a href="#"><%#:Eval("tieude") %></a>
+                                <div class="news_t_h"><a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><%#:Eval("tieude") %></a>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="new_teaser_h"><%#:Eval("tomtat") %></div>
@@ -85,12 +85,12 @@
                             <td valign="top" align="center" width="33%">
                                 <div class="img_news_h_1">
                                     <div align="center" class="img_news_h">
-                                        <a href="#"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
+                                        <a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
-                                <div class="news_t_h"><a href="#"><%#:Eval("tieude") %></a>
+                                <div class="news_t_h"><a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><%#:Eval("tieude") %></a>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="new_teaser_h"><%#:Eval("tomtat") %></div>
@@ -119,12 +119,12 @@
                             <td valign="top" align="center" width="33%">
                                 <div class="img_news_h_1">
                                     <div align="center" class="img_news_h">
-                                        <a href="#"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
+                                        <a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><img width="186" alt="<%#:Eval("tieude") %>" title="<%#:Eval("tieude") %>" src="<%#:Eval("hinhanh") %>" border="0" style="margin:2px;">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
-                                <div class="news_t_h"><a href="#"><%#:Eval("tieude") %></a>
+                                <div class="news_t_h"><a href="chitiet.aspx?page=v.<%#:Eval("id") %>.<%#:Eval("link") %>.html"><%#:Eval("tieude") %></a>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="new_teaser_h"><%#:Eval("tomtat") %></div>
@@ -137,7 +137,5 @@
                 </table>
            </div>
         </div>
-    </div>
-    
-        
+    </div>            
 </div>

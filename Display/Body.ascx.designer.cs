@@ -13,12 +13,30 @@ namespace TruongTieuHoc.Display.Content {
     public partial class Body {
         
         /// <summary>
-        /// TrangChu control.
+        /// SliderArea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TruongTieuHoc.Display.Content.TrangChu TrangChu;
+        protected global::TruongTieuHoc.Display.Content.SliderArea SliderArea;
+        
+        /// <summary>
+        /// MainBody control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder MainBody;
+        
+        /// <summary>
+        /// RightArea control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TruongTieuHoc.Display.Content.RightPage RightArea;
     }
 }

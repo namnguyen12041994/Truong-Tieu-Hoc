@@ -11,7 +11,7 @@
 				<span class="icon-bar"></span>
 			</button>
 
-			<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Trang chủ</a>
+			<a class="navbar-brand" href="./default.aspx"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Trang chủ</a>
 		</div>				
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
@@ -27,34 +27,33 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hoạt động <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Giảng dạy</a></li>
-						<li><a href="#">Công đoàn</a></li>
-						<li><a href="#">Văn nghệ</a></li>
-						<li><a href="#">Hoạt động khác</a></li>
+						<li><a href="danhmuc.aspx?cata=giangday.html">Giảng dạy</a></li>						
+						<li><a href="danhmuc.aspx?cata=vannghe.html">Văn nghệ</a></li>
+						<li><a href="danhmuc.aspx?cata=hoatdongkhac.html">Hoạt động khác</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tin tức - Sự kiện <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Tin nhà trường</a></li>
-						<li><a href="#">Tin tổng hợp</a></li>
-						<li><a href="#">Tin từ phòng GD&ĐT</a></li>
-						<li><a href="#">Giới thiệu sách</a></li>
-						<li><a href="#">Hoạt động Đoàn - Đội</a></li>
-						<li><a href="#">Hợp tác quốc tế</a></li>							
+						<li><a href="danhmuc.aspx?cata=tinnhatruong.html">Tin nhà trường</a></li>
+						<li><a href="danhmuc.aspx?cata=tintonghop.html">Tin tổng hợp</a></li>
+						<li><a href="danhmuc.aspx?cata=tingiaoducvadaotao.html">Tin từ phòng GD&ĐT</a></li>
+						<li><a href="danhmuc.aspx?cata=gioithieusach.html">Giới thiệu sách</a></li>
+						<li><a href="danhmuc.aspx?cata=hoatdongdoi.html">Hoạt động Đoàn - Đội</a></li>
+						<li><a href="danhmuc.aspx?cata=hoptacquocte.html">Hợp tác quốc tế</a></li>							
 					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Thư viện điện tử <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Thư viện ảnh</a></li>
-						<li><a href="#">Thư viện video</a></li>
+						<li><a href="thuvien.aspx">Thư viện ảnh</a></li>
+						<li><a href="thuvienvideo.aspx">Thư viện video</a></li>
 						<li><a href="#">Thư viện sách điện tử</a></li>
-						<li><a href="#">Văn bản chỉ đạo</a></li>	
+						<li><a href="danhmuc.aspx?cata=vanbanchidao.html">Văn bản chỉ đạo</a></li>	
 					</ul>
 				</li>
-				<li class=""><a href="#">Thông báo</a></li>
-				<li class=""><a href="#">Liên hệ</a></li>
+				<li class=""><a href="danhmuc.aspx?cata=thongbao.html">Thông báo</a></li>
+				<li class=""><a href="./lienhe.aspx">Liên hệ</a></li>
 			</ul>
 			<form class="navbar-form navbar-right" role="search">
 				<div class="form-group form-group-sm">

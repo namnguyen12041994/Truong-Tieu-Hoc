@@ -13,30 +13,30 @@ namespace TruongTieuHoc {
     public partial class Default {
         
         /// <summary>
-        /// Header1 control.
+        /// SliderArea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TruongTieuHoc.Display.Header Header1;
+        protected global::TruongTieuHoc.Display.Content.SliderArea SliderArea;
         
         /// <summary>
-        /// Body control.
+        /// MainBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TruongTieuHoc.Display.Content.Body Body;
+        protected global::TruongTieuHoc.Display.Content.MainBody MainBody;
         
         /// <summary>
-        /// Footer1 control.
+        /// RightArea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TruongTieuHoc.Display.Footer Footer1;
+        protected global::TruongTieuHoc.Display.Content.RightPage RightArea;
     }
 }

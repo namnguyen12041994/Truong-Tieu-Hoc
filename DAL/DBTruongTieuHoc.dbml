@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_TruongTieuHoc" Class="DBTruongTieuHocDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=HADESKER\SQLHADESKER;Initial Catalog=db_TruongTieuHoc;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="db_TruongTieuHocConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.tbl_AnhClip" Member="tbl_AnhClips">
-    <Type Name="tbl_AnhClip">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MoTa" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="IDCD" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThuTu" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.tbl_WebsiteLienKet" Member="tbl_WebsiteLienKets">
     <Type Name="tbl_WebsiteLienKet">
       <Column Name="IDW" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -27,22 +16,6 @@
       <Column Name="IDCD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenCD" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="MoTaChuDe" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_BaiDang_ChiTiet" Member="tbl_BaiDang_ChiTiets">
-    <Type Name="tbl_BaiDang_ChiTiet">
-      <Column Name="IDBD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TieuDeBD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="TomTatBD" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
-      <Column Name="NoiDungBD" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="HinhAnhBD" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="MoiNhatBD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="LuotXemBD" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NgayDangBD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="IDNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThuTu" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="IDNhom" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_BaiDang_Nhom" Member="tbl_BaiDang_Nhoms">
@@ -84,8 +57,9 @@
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="HoTen" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="Email" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NgayNhan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TinNhan" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TrangThaiDoc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NguoiDung" Member="tbl_NguoiDungs">
@@ -93,15 +67,52 @@
       <Column Name="IDAdmin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="MatKhau" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AnhDaiDien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="Ho" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
       <Column Name="GioiTinh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
-      <Column Name="ChucVu" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="QuyenAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_AnhClip" Member="tbl_AnhClips">
+    <Type Name="tbl_AnhClip">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ThuTu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ThongTinCaiDat" Member="tbl_ThongTinCaiDats">
+    <Type Name="tbl_ThongTinCaiDat">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ViTri" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GiaTri" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_BaiDang_ChiTiet" Member="tbl_BaiDang_ChiTiets">
+    <Type Name="tbl_BaiDang_ChiTiet">
+      <Column Name="IDBD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDeBD" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TomTatBD" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="NoiDungBD" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HinhAnhBD" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MoiNhatBD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LuotXemBD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDangBD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThuTu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDNhom" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

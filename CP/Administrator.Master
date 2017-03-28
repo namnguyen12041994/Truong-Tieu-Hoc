@@ -1,0 +1,218 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrator.Master.cs" Inherits="TruongTieuHoc.CP.Admin" %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>.:Quản lý:.</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">        
+     
+     <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+
+    <asp:ContentPlaceHolder ID="ForCSS" runat="server">        
+    </asp:ContentPlaceHolder>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="#" class="site_title"><i class="fa fa-graduation-cap"></i> <span>Bình Đông 1</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile">
+              <div class="profile_pic">
+                <img src="<%=GetUser_Name(true) %>" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Xin chào,</span>
+                <h2><b><%=GetUser_Name(false) %></b></h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a href="./"><i class="fa fa-home"></i> Trang chủ </a>                    
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> Quản lý nhóm bài đăng <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="baiviet.aspx">Bài viết</a></li>
+                      <li><a href="danhmucbaiviet.aspx">Danh mục</a></li>                      
+                    </ul>
+                  </li>
+                  <li><a href="danhsachanhclip.aspx"><i class="fa fa-camera"></i> Quản lý ảnh - clip </a>                    
+                  </li>
+                  <li><a><i class="fa fa-download"></i> Quản lý download <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="chudedown.aspx">Chủ đề download</a></li>
+                      <li><a href="danhmucdown.aspx">Danh mục download</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li><a><i class="fa fa-users"></i> Quản lý liên kết <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="danhsachwebsite.aspx">Danh sách website liên kết</a></li>
+                      <li><a href="danhsachwebsite.aspx?add">Thêm website liên kết</a></li>
+                    </ul>
+                  </li>
+                <li><a href="lienhe.aspx"><i class="fa fa-envelope-o"></i> Danh mục liên hệ <span class="label label-success pull-right"><%=Get_LienHeQuantity() %></span></a></li>
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>Người dùng</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-user"></i> Quản lý người dùng <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="nguoidung.aspx">Hiển thị thông tin</a></li>
+                      <li><a href="nguoidung.aspx?find">Tìm kiếm</a></li>
+                      <li><a href="nguoidung.aspx?add">Thêm người dùng mới</a></li>               
+                    </ul>
+                  </li>                 
+                  
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Cài đặt">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Phóng to">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Khóa menu">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a href="logout.aspx" data-toggle="tooltip" data-placement="top" title="Đăng xuất">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav class="" role="navigation">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                  
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="<%=GetUser_Name(true) %>" alt="Ảnh đại diện"><b><%=GetUser_Name(false) %></b>
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"><i class="fa fa-user"></i> Thông tin cá nhân</a></li>                    
+                    <li><a href="javascript:;"><i class="fa fa-gears"></i> Cài đặt</a></li>
+                    <li class="divider"></li>
+                    <li><a href="logout.aspx"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-red"><%=Get_LienHeQuantity() %></span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                      <asp:Repeater ID="rptLienHe" runat="server">
+                          <ItemTemplate>
+                              <li>
+                                  <a href="lienhe.aspx?detail=x.<%#:Eval("id") %>.<%#:Eval("idgia")%>de.html">
+                                      <span class="image">
+                                          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAADEElEQVRoQ+2Z7XHUMBCG31QAdAAVJKkA6AAqIKkAqACoAKgAqIBQAVABSQVABYQKYJ4Z7c1mR2fJtnL+GO+fy1xkaR+9+yH5jrQyO1oZjzaguSu6KbQpdOAdWH3IPZP0QtLJgTd26HKXkt5J+mQTmEJ3JX1dEEjcAMAeS7o2oB8LhjE4oE4BIsTeDtV8Zs+dAxTV+S7pTNKvmTkb3bkv6aOkh+4flwD9CyMfLADGXAbqp/c/B7S0Un5DkBwQJZBSSJLN2Wgt5D+tZmc5oHuSLpKUb2YYfoTZK0mkxhNJf0pAFnKv04OoBdj1xHLRKwFBFfzBP6wYcj6H2AEqCQ8B9n4CMECeJxB8owITQWa9gHgIiZngOMGwQ7ujxi2rRn6wkUBdpRCL7aQ3ED4zIRNbAjIpkt8WGOswP5uJsQ4bmQv7QUAmBHJ/cKp8S/HMZwt7lPKET7PzFPb75h8FxKSUSwDuBLCXI0o9c3L88iC/U4iV2sdoIAtB8sofO/ieAtKn1FsJRnlvHL8oSDWVtQmQLU5eUYGiEf9dFdEql5Ve/zzPkS+11hSIRdnJz5nV2d1Y6n0J5u9oT0NJroFqDkSRiCHjHbGKyHe+cuWcJWQpAn2sKVCE+RuKRY1j8Zm+UM2AIowlst1TaMRdxnhyBQVjgekD1QQowlCyyRdvOEuI+fLO/1GE73Pj/c25Fmo0kIfhOEL+7OsV8VZZug3TjwAxdWugRgF5GMorO13TK4BmnD9U7gtHqh/zWjsoQQ0GMhhCJp54a5K/7xg76ROyXVCDgKyBfkkwNar0BciNRy0rGP4O5Mf2BkINgHKJ3MLpmjmswPCJWoOBgGGSrsSvcajFGCsYbK6HqlYICHsR0cKhVnPYCxyDqgKyk26re04rGJuHa4blVxHoNHXvQyX+UFiA6HO8+d0ZLx1oiv6YgiqcepcAxCnfXwqvVvmyHrmiSkPDYMrnOIad+B+8CLXSCXlKh7vWBobQ2/3gZYOt7ywFDJAbfWlpvzQUI2QDKm7RxAM2hSYWoLj8plBxiyYesDqF/gMvYMl65eHpvgAAAABJRU5ErkJggg==" alt="Hình" /></span>
+                                      <span>
+                                      <span><b><%#:Eval("hoten") %></b></span>
+                                      <span class="time"><%#:Eval("ngaynhan") %></span>
+                                      </span>
+                                      <span class="message"><%#:Eval("noidung") %>
+                                      </span>
+                                  </a>
+                              </li>
+                          </ItemTemplate>
+                      </asp:Repeater>                      
+                    <li>
+                      <div class="text-center">
+                        <a href="lienhe.aspx">
+                          <strong>Xem tất cả tin nhắn</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+
+                </li>
+                  <li>
+                      <a href="../" target="_blank">
+                          <i class="fa fa-home"><b> Xem trước trang</b></i>
+                      </a>
+                  </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+          <asp:ContentPlaceHolder ID="ForContent" runat="server">
+          </asp:ContentPlaceHolder>
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            <p>&copy; binhdong1.edu.vn&nbsp;copyright&nbsp;2016&nbsp;</p>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- validator -->
+    <script src="vendors/validator/validator.min.js"></script>
+      
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="ForJS" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+  </body>
+</html>

@@ -20,10 +20,15 @@
 <div class="panel panel-danger ">
 	<div class="panel-heading">
 		<h3 class="panel-title">.:TRUY CẬP:.</h3>
-	</div>
-	<div class="panel-body access">
-		<div>- Đang online: <span>j</span></div>
-		<div>- Trong ngày: <span>j</span></div>
-		<div>- Trong tháng: <span>j</span></div>
-	</div>
+	</div>    
+    <div class="panel-body access">
+        <form runat="server">
+            <div>- Đang online: <span>
+                <asp:Label Text="Đang online" runat="server" ID="lbOnline"></asp:Label></span></div>
+            <div>- Trong ngày: <span>j</span></div>
+            <div>- Trong tháng: <span>none</span></div>
+            <div>- Tổng lượt truy cập: <span>
+                <asp:Label Text="Tổng" runat="server" ID="lbTongTruyCap"></asp:Label></span></div>
+        </form>
+    </div>
 </div>
